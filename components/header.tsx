@@ -10,17 +10,17 @@ export default function Header() {
 
   return (
     <header className="bg-card/80 backdrop-blur-md border-b border-border/50 sticky top-0 z-50 shadow-lg">
-      <div className="bg-gradient-to-r from-primary to-secondary text-primary-foreground py-2 px-4 text-center text-sm font-medium">
+      <div className="bg-gradient-to-r from-primary to-secondary text-primary-foreground py-2 px-3 text-center text-xs sm:text-sm font-medium">
         <span>✨ Free shipping on orders over $50 • 30-day returns • New arrivals daily!</span>
       </div>
 
-      <div className="container mx-auto px-4 py-3">
-        <div className="flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3 min-w-fit">
-            <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-primary-foreground font-bold text-xl">G</span>
+      <div className="container mx-auto px-3 sm:px-4 py-3">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-3 min-w-0">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-lg shrink-0">
+              <span className="text-primary-foreground font-bold text-lg sm:text-xl">G</span>
             </div>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent truncate">
               Glamora
             </h1>
           </div>
@@ -61,21 +61,21 @@ export default function Header() {
             </a>
           </nav>
 
-          <div className="hidden md:flex items-center flex-1 max-w-lg mx-6">
+          <div className="hidden md:flex items-center flex-1 max-w-lg mx-4 lg:mx-6">
             <div className="relative w-full">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
               <Input
-                placeholder="Search for makeup, fashion, electronics..."
+                placeholder="Search products..."
                 className="pl-12 pr-4 py-3 bg-muted/30 border-border/50 rounded-xl focus:bg-card focus:border-primary/50 transition-all duration-300"
               />
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 sm:gap-2">
             <Button
               variant="ghost"
               size="icon"
-              className="hidden md:flex hover:bg-primary/10 hover:text-primary transition-all duration-300 rounded-xl"
+              className="hidden sm:flex hover:bg-primary/10 hover:text-primary transition-all duration-300 rounded-xl"
             >
               <User className="w-5 h-5" />
             </Button>

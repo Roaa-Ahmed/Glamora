@@ -59,7 +59,7 @@ export default function ProductShowcase() {
   }
 
   return (
-    <section className="relative h-[70vh] overflow-hidden bg-gradient-to-br from-card to-background">
+    <section className="relative min-h-[70vh] sm:min-h-[75vh] overflow-hidden bg-gradient-to-br from-card to-background">
       <div className="absolute inset-0">
         {showcaseProducts.map((product, index) => (
           <div
@@ -72,29 +72,31 @@ export default function ProductShowcase() {
                   : "opacity-0 transform translate-x-full"
             }`}
           >
-            <div className="container mx-auto px-4 h-full flex items-center">
-              <div className="grid md:grid-cols-2 gap-12 items-center w-full">
-                <div className="space-y-6 animate-fade-in">
+            <div className="container mx-auto px-3 sm:px-4 h-full flex items-center py-8 sm:py-10">
+              <div className="grid gap-8 md:grid-cols-2 md:gap-10 lg:gap-12 items-center w-full">
+                <div className="space-y-5 sm:space-y-6 animate-fade-in text-center md:text-left">
                   <div className="space-y-2">
                     <p className="text-primary font-semibold tracking-wider text-sm">{product.subtitle}</p>
-                    <h2 className="text-4xl md:text-6xl font-bold text-foreground leading-tight text-balance">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance">
                       {product.title}
                     </h2>
-                    <p className="text-muted-foreground text-lg max-w-md text-pretty">{product.description}</p>
+                    <p className="text-muted-foreground text-base sm:text-lg max-w-md mx-auto md:mx-0 text-pretty">
+                      {product.description}
+                    </p>
                   </div>
                   <Button
                     size="lg"
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-3 text-base sm:text-lg"
                   >
                     {product.cta}
                   </Button>
                 </div>
-                <div className="relative">
-                  <Card className="overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                <div className="relative mx-auto w-full max-w-xl md:mx-0">
+                  <Card className="overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
                     <img
                       src={product.image || "/placeholder.svg"}
                       alt={product.title}
-                      className="w-full h-[400px] object-cover"
+                      className="w-full h-[260px] sm:h-[320px] md:h-[360px] lg:h-[400px] object-cover"
                     />
                   </Card>
                 </div>

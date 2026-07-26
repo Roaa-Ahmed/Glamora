@@ -38,19 +38,19 @@ export default function CategorySection() {
   }
 
   return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+    <section className="py-12 sm:py-16 bg-background">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="text-center mb-8 sm:mb-12">
           <p className="text-primary font-semibold tracking-wider text-sm mb-2">OUR STORE</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">Shop by Categories</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">Shop by Categories</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
           {categories.map((category, index) => (
             <Card
               key={index}
               onClick={() => handleCategoryClick(category.link)}
-              className="group cursor-pointer hover:shadow-xl transition-all duration-500 hover:-translate-y-2 bg-card border-border overflow-hidden relative h-72"
+              className="group cursor-pointer hover:shadow-xl transition-all duration-500 hover:-translate-y-2 bg-card border-border overflow-hidden relative h-64 sm:h-72"
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"

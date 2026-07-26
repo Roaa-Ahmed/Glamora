@@ -58,14 +58,14 @@ const featuredProducts = [
 
 export default function FeaturedProducts() {
   return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+    <section className="py-12 sm:py-16 bg-background">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="text-center mb-8 sm:mb-12">
           <p className="text-primary font-semibold tracking-wider text-sm mb-2">FEATURED</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">Featured Products</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">Featured Products</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4 sm:gap-6">
           {featuredProducts.map((product) => (
             <Card
               key={product.id}
